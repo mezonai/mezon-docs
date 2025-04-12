@@ -1,6 +1,6 @@
 # Mezon API Documentation
 
-This repo contains the official Mezon API documentation, which can be viewed online [HERE](https://mezon.com/developers/docs/intro). Before submitting pull-requests, please remember to _fully_ read the [Contributing](CONTRIBUTING.md) guidelines.
+This repo contains the official Mezon API documentation, which can be viewed online [HERE](https://mezon.ai/developers/docs/intro). Before submitting pull-requests, please remember to _fully_ read the [Contributing](CONTRIBUTING.md) guidelines.
 
 This repository reflects the Mezon API as it is meant to be accessed by third-party applications. It omits features and capabilities that are not generally available, or are not fully supported for third-party usage.
 
@@ -8,7 +8,7 @@ We welcome your contributions!
 
 -   Issue tracker: Mezon API bugs
 -   Discussions: Mezon API feature and improvement requests
--   Pull Requests: See [Contributing.md](https://github.com/mezon/mezon-api-docs/blob/main/CONTRIBUTING.md) for types of changes accepted and specific markdown syntax used in the documentation.
+-   Pull Requests: See [Contributing.md](https://github.com/nccasia/mezon-docs/blob/main/CONTRIBUTING.md) for types of changes accepted and specific markdown syntax used in the documentation.
 
 ## Need some help?
 
