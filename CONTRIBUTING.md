@@ -1,6 +1,6 @@
 # Contributing
 
-See the [README](https://github.com/mezon/mezon-api-docs/blob/main/README.md) for licensing and legal information.
+See the [README](https://github.com/mezon/mezon-docs/blob/main/README.md) for licensing and legal information.
 
 ## Types of Changes
 
@@ -18,7 +18,7 @@ See the [README](https://github.com/mezon/mezon-api-docs/blob/main/README.md) fo
 1. Modifications to the overall structure and format of the API docs.
 1. Additions that replicate or needlessly restructure current documentation.
 1. Additions that document unreleased product functionality.
-1. Changes that modify [Community Resources](https://mezon.com/developers/docs/topics/community-resources#community-resources) (see [guidelines](https://github.com/mezon/mezon-api-docs/discussions/4456) for more detail).
+1. Changes that modify [Community Resources](https://mezon.com/developers/docs/topics/community-resources#community-resources) (see [guidelines](https://github.com/mezon/mezon-docs/discussions/4456) for more detail).
 
 ## Markdown Syntax
 

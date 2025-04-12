@@ -5,13 +5,13 @@ sidebar_label: Developer Policy
 # Mezon Developer Policy
 
 > info
-> We’re updating our Developer Terms of Service and Developer Policy, effective July 8, 2024. Please review the updated Policy below and Terms [here](#DOCS_POLICIES_AND_AGREEMENTS_DEVELOPER_TERMS_OF_SERVICE). If you access or use the APIs on or after July 8, 2024, it means you agree to the updated Policy and Terms. Until then, the current [Developer Terms of Service](https://github.com/mezon/mezon-api-docs/blob/e5cd463cd1412df2e55fce8ecb81e7d1ed5755b0/docs/policies_and_agreements/Developer_Terms_of_Service.md) and [Developer Policy](https://github.com/mezon/mezon-api-docs/blob/e5cd463cd1412df2e55fce8ecb81e7d1ed5755b0/docs/policies_and_agreements/Developer_Policy.md) will apply.
+> We’re updating our Developer Terms of Service and Developer Policy, effective July 8, 2024. Please review the updated Policy below and Terms [here](#DOCS_POLICIES_AND_AGREEMENTS_DEVELOPER_TERMS_OF_SERVICE). If you access or use the APIs on or after July 8, 2024, it means you agree to the updated Policy and Terms. Until then, the current [Developer Terms of Service](https://github.com/mezon/mezon-docs/blob/e5cd463cd1412df2e55fce8ecb81e7d1ed5755b0/docs/policies_and_agreements/Developer_Terms_of_Service.md) and [Developer Policy](https://github.com/mezon/mezon-docs/blob/e5cd463cd1412df2e55fce8ecb81e7d1ed5755b0/docs/policies_and_agreements/Developer_Policy.md) will apply.
 
 ## Effective date: July 8, 2024
 
 ## Last updated: June 6, 2024
 
-*For a link to the previous policy, please see **[here](https://github.com/mezon/mezon-api-docs/blob/e5cd463cd1412df2e55fce8ecb81e7d1ed5755b0/docs/policies_and_agreements/Developer_Policy.md)**. For a translated version in your selected language, as available, please see **[here](https://support-dev.mezon.com/hc/articles/8563934450327)**.*
+*For a link to the previous policy, please see **[here](https://github.com/mezon/mezon-docs/blob/e5cd463cd1412df2e55fce8ecb81e7d1ed5755b0/docs/policies_and_agreements/Developer_Policy.md)**. For a translated version in your selected language, as available, please see **[here](https://support-dev.mezon.com/hc/articles/8563934450327)**.*
 
 Mezon is a place where developers can come to build cool experiences to further the way that people connect. As Mezon continues to grow and support our developers, it’s important to be transparent about the responsibilities and our expectations of developers and their Applications. This document sets forth the rules developers will need to follow to develop and operate their Applications.
 
