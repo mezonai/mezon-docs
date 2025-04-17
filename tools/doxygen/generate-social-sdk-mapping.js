@@ -77,7 +77,7 @@ const generateMapping = async () => {
         if (["function", "enum", "class", "struct"].includes(memberKind)) {
           memberId = memberId.replace(`${refid}_1`, "");
           const url = `${BASE_URL}/${refid}.html#${memberId}`;
-          // Keep the discordpp:: prefix in the symbol name
+          // Keep the mezonpp:: prefix in the symbol name
           const symbol = `${name}::${memberName}`;
           mapping[symbol] = url;
         }

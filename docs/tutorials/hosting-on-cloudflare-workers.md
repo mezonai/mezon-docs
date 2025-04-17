@@ -54,7 +54,7 @@ Now we'll configure the bot with [permissions](#DOCS_TOPICS_PERMISSIONS) require
 Cloudflare Workers are a convenient way to host Mezon apps due to the free tier, simple development model, and automatically managed environment (no VMs!).
 
 > warn
-> When using Cloudflare Workers, your app won't be able to access non-ephemeral CDN media. For example, trying to fetch an image like `https://cdn.discordapp.com/attachments/1234/56789/my_image.png` would result in a `403` error. Cloudflare Workers are still able to access ephemeral CDN media.
+> When using Cloudflare Workers, your app won't be able to access non-ephemeral CDN media. For example, trying to fetch an image like `https://cdn.mezonapp.com/attachments/1234/56789/my_image.png` would result in a `403` error. Cloudflare Workers are still able to access ephemeral CDN media.
 
 - Visit the [Cloudflare Dashboard](https://dash.cloudflare.com/)
 - Click on the `Workers` tab, and create a new service using the same name as your Mezon bot
@@ -65,9 +65,9 @@ Cloudflare Workers are a convenient way to host Mezon apps due to the free tier,
 The production service needs access to some of the information we saved earlier. To set those variables, run:
 
 ```
-$ wrangler secret put DISCORD_TOKEN
-$ wrangler secret put DISCORD_PUBLIC_KEY
-$ wrangler secret put DISCORD_APPLICATION_ID
+$ wrangler secret put MEZON_TOKEN
+$ wrangler secret put MEZON_PUBLIC_KEY
+$ wrangler secret put MEZON_APPLICATION_ID
 ```
 
 You'll also need the Guild ID for the server where your app is installed. This can be found in the URL when you visit any channel in that server.
@@ -78,7 +78,7 @@ You'll also need the Guild ID for the server where your app is installed. This c
 Once you know your Guild ID, set that variable as well:
 
 ```
-$ wrangler secret put DISCORD_TEST_GUILD_ID
+$ wrangler secret put MEZON_TEST_GUILD_ID
 ```
 
 ## Running locally
@@ -145,15 +145,15 @@ import fetch from 'node-fetch';
  * to be run once.
  */
 
-const token = process.env.DISCORD_TOKEN;
-const applicationId = process.env.DISCORD_APPLICATION_ID;
+const token = process.env.MEZON_TOKEN;
+const applicationId = process.env.MEZON_APPLICATION_ID;
 
 if (!token) {
-  throw new Error('The DISCORD_TOKEN environment variable is required.');
+  throw new Error('The MEZON_TOKEN environment variable is required.');
 }
 if (!applicationId) {
   throw new Error(
-    'The DISCORD_APPLICATION_ID environment variable is required.'
+    'The MEZON_APPLICATION_ID environment variable is required.'
   );
 }
 
@@ -194,7 +194,7 @@ await registerGlobalCommands();
 This command needs to be run locally, once before getting started:
 
 ```
-$ DISCORD_TOKEN=**** DISCORD_APPLICATION_ID=**** node src/register.js
+$ MEZON_TOKEN=**** MEZON_APPLICATION_ID=**** node src/register.js
 ```
 
 We're finally ready to run this code locally! Let's start by running our local development server:
@@ -269,7 +269,7 @@ export default {
         body,
         signature,
         timestamp,
-        env.DISCORD_PUBLIC_KEY
+        env.MEZON_PUBLIC_KEY
       );
       if (!isValidRequest) {
         console.error('Invalid Request');
@@ -317,7 +317,7 @@ router.post('/', async (request, env) => {
         });
       }
       case INVITE_COMMAND.name.toLowerCase(): {
-        const applicationId = env.DISCORD_APPLICATION_ID;
+        const applicationId = env.MEZON_APPLICATION_ID;
         const INVITE_URL = `https://mezon.com/oauth2/authorize?client_id=${applicationId}&scope=applications.commands`;
         return new JsonResponse({
           type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,

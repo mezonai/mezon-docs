@@ -149,7 +149,7 @@ Click on **Installation** in the left sidebar, then under **Installation Context
 
 On the **Installation** page, go to the **Install Link** section and select "Mezon Provided Link" if it's not already selected.
 
-When Discorded Provided Link is selected, a new **Default Install Settings** section will appear, which we'll configure next.
+When Mezoned Provided Link is selected, a new **Default Install Settings** section will appear, which we'll configure next.
 
 ### Adding scopes and bot permissions
 
@@ -203,7 +203,7 @@ With your app configured and installed to your test server and account, let's ta
 ### Installing slash commands
 
 > info
-> To install slash commands, the app is using [`node-fetch`](https://github.com/node-fetch/node-fetch). You can see the implementation for the installation in `utils.js` within the `DiscordRequest()` function.
+> To install slash commands, the app is using [`node-fetch`](https://github.com/node-fetch/node-fetch). You can see the implementation for the installation in `utils.js` within the `MezonRequest()` function.
 
 The project contains a `register` script you can use to install the commands in `ALL_COMMANDS`, which is defined at the bottom of `commands.js`. It installs the commands as global commands by calling the HTTP API's [`PUT /applications/<APP_ID>/commands`](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/bulk-overwrite-global-application-commands) endpoint.
 
@@ -430,7 +430,7 @@ if (type === InteractionType.MESSAGE_COMPONENT) {
         },
       });
       // Delete previous message
-      await DiscordRequest(endpoint, { method: 'DELETE' });
+      await MezonRequest(endpoint, { method: 'DELETE' });
     } catch (err) {
       console.error('Error sending message:', err);
     }
@@ -489,7 +489,7 @@ const componentId = data.custom_id;
         },
       });
       // Delete previous message
-      await DiscordRequest(endpoint, { method: 'DELETE' });
+      await MezonRequest(endpoint, { method: 'DELETE' });
     } catch (err) {
       console.error('Error sending message:', err);
     }
@@ -525,7 +525,7 @@ const componentId = data.custom_id;
           data: { content: resultStr },
         });
         // Update ephemeral message
-        await DiscordRequest(endpoint, {
+        await MezonRequest(endpoint, {
           method: 'PATCH',
           body: {
             content: 'Nice choice ' + getRandomEmoji(),

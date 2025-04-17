@@ -84,9 +84,9 @@ There's already some code in your `server.js` file, but you’ll need your app�
 > warn
 > It bears repeating that you should never check any credentials or secrets into source control. The getting started project's `.gitignore` comes pre-loaded with `.env` to prevent it.
 
-First, copy your bot user’s token from earlier and paste it in the `DISCORD_TOKEN` variable in your `.env` file.
+First, copy your bot user’s token from earlier and paste it in the `MEZON_TOKEN` variable in your `.env` file.
 
-Next, navigate to your app settings in the developer portal, and navigate to OAuth2 -> General. Copy the Client ID and Client Secret for your application, and paste the values as `DISCORD_CLIENT_ID` and `DISCORD_CLIENT_SECRET` in your `.env`. 
+Next, navigate to your app settings in the developer portal, and navigate to OAuth2 -> General. Copy the Client ID and Client Secret for your application, and paste the values as `MEZON_CLIENT_ID` and `MEZON_CLIENT_SECRET` in your `.env`. 
 
 ![Configure OAuth2](linked-roles-oauth-config.png)
 
@@ -94,7 +94,7 @@ Now, we need to set the Redirect URL that will be used for our OAuth2 flow. Go b
 
 ![Glitch Share](linked-roles-glitch-share-url.png)
 
-Go back to the OAuth2 -> General tab in the Mezon developer portal, and add a new redirect for your app using the Glitch URL and the `/mezon-oauth-callback` route. Copy this URL, then paste it as `DISCORD_REDIRECT_URI` in your `.env`. 
+Go back to the OAuth2 -> General tab in the Mezon developer portal, and add a new redirect for your app using the Glitch URL and the `/mezon-oauth-callback` route. Copy this URL, then paste it as `MEZON_REDIRECT_URI` in your `.env`. 
 
 Go to the General Information tab in the developer portal, and scroll down to the `Linked Roles Verification Url` field. Paste the base URL to your Glitch app, add the `/linked-role` route, then save.
 
@@ -113,10 +113,10 @@ crypto.randomUUID()
 Copy the randomly generated UUID, and paste it into your `.env` as `COOKIE_SECRET`. Your `.env` should look something like this:
 
 ```
-DISCORD_CLIENT_ID: <your OAuth2 client Id>
-DISCORD_CLIENT_SECRET: <your OAuth2 client secret>
-DISCORD_TOKEN: <your bot token>
-DISCORD_REDIRECT_URI: https://<your-project-name>.glitch.me/mezon-oauth-callback
+MEZON_CLIENT_ID: <your OAuth2 client Id>
+MEZON_CLIENT_SECRET: <your OAuth2 client secret>
+MEZON_TOKEN: <your bot token>
+MEZON_REDIRECT_URI: https://<your-project-name>.glitch.me/mezon-oauth-callback
 COOKIE_SECRET: <random generated UUID>
 ```
 
